@@ -20,7 +20,7 @@ body{
 	padding:2%;
 	cursor:crosshair;
     box-shadow: 0 5px 5px 0 rgba(55, 55, 55, .7);
-    z-index:1;
+    z-index:10;
     font-family:righteous;
     margin-bottom:50%;
 }
@@ -38,6 +38,7 @@ body{
 }
 .Bar img{
 	float:left;
+	position:relative;
 }
 .container{
 	display:block;
@@ -66,7 +67,6 @@ body{
 	width:95%;
 	text-align:center;
 	outline:none;
-	border:none;
 	border-radius:20px;
 	padding:1.2vh 0;
 	font-size:13pt;
@@ -89,7 +89,6 @@ body{
 	width:95%;
 	text-align:center;
 	outline:none;
-	border:none;
 	border-radius:20px;
 	padding:1.2vh 0;
 	font-size:13pt;
@@ -119,7 +118,58 @@ body{
 	font-size:10pt;
 	letter-spacing:2px;
 }
-a{color:black;}
+a{
+	color:black;
+}
 a:hover{
 	-webkit-tap-highlight-color: transparent;
+}
+.groupNft{
+	height:40vh;
+	width:90vw;
+	background:black;
+	border-radius:20px;
+}
+.NftCollection{
+	display:flex;
+	margin:1rem auto;
+	padding:4% 5%;
+	text-align:center;
+	flex-wrap:wrap;
+	margin:1rem 7rem;
+	justify-content:center;
+	align-items:center;
+	overflow:hidden;
+	width:25vw;
+}
+.NftCollection img{
+	height:12vh;
+	width:25vw;
+	border-radius:50%;
+	display:block;
+	margin-bottom:1vh;
+}
+.NftCollection-grid{
+	display:flex;
+	flex-wrap:wrap;
+	margin:1rem 1.5rem;
+	justify-content:center;
+	align-items:center;
+	height:40vh;
+	width:81.2vw;
+	overflow:hidden;
+}
+.NftCollection-grid img{
+	height:20vh;
+	width:40vw;
+	display:block;
+	transition: 0.3s all ease-in-out;
+	position:relative;
+	border:1px solid white;
+	z-index:2;
+}
+.NftCollection-grid img:hover{
+	transform:scale(1.2);
+	filter:brightness(190%);
+	z-index:1;
 }
