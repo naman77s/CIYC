@@ -15,7 +15,7 @@
 <link rel="icon" href="./assets/img/nft/GroupA/4.jpg" type="image/x-icon">
 <!-- Meta tags -->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<meta name="keywords" content="CIYC, Crypto Influencer Yacht Club" />
+<meta name="keywords" content="CIYC, Crypto Influencer Yacht Club, programmerxd" />
 <meta name="author" content="CIYC" />
 <meta name="title" content="CIYC" />
 <meta name="description" content="CRYPTO INFLUENCER YACHT CLUB!!!!!!
@@ -37,8 +37,9 @@ MINT DATE TBA" />
 <meta id="theme" name="theme-color" content="#000" />
 </head>
 <body>
+<div id="screen">
 <header class="Bar">
-	<a href=""><img src="./assets/img/Logo.png" height="40vh" width="" alt="CIYC Official Logo"></a>Crypto Influencer Yacht club
+	<a href="#"><img src="./assets/img/Logo.png" height="40vh" width="" alt="CIYC Official Logo"></a>Crypto Influencer Yacht club
 </header><br><br><br><br>
 
 <a href="#RoadMap" class="btn-classic">Roadmap</a><br>
@@ -60,7 +61,7 @@ MINT DATE TBA" />
 	<a target="_blank" rel="noopener noreferrer" href="https://discord.com/invite/haNtA9TBKc" class="btn-img"><img src="./assets/img/social/discord.png" alt="Discord"> Discord </a>
 	<a target="_blank" rel="noopener noreferrer" href="https://opensea.io/collection/crypto-ciyc-nft-888?tab=activity&search[isSingleCollection]=true" class="btn-img"><img src="./assets/img/social/opensea.png" alt="OpenSea"> Trade On Open sea </a>
 	<a target="_blank" rel="noopener noreferrer" href="mailto:CIYCNFT@gmail.com" class="btn-img"><img src="./assets/img/social/gmail.png" alt="Gmail"> Gmail </a>
-
+	<!--<a href="" class="btn-img"><img src="./assets/img/social/contract.png" alt="Contract"> Verified Contract </a>-->
 </div>
 
 <div class="embed">
@@ -129,20 +130,87 @@ MINT DATE TBA" />
 <div class="btn-circle" onclick="gooto()">
 	<i class="fa fa-angle-down"></i>
 </div>
+</div>
+<div class="container-preloader">
+	<h1>Loading website</h1><br><br>
+	<div class="loader">
+		<div class="spinner"></div>
+	</div>
+</div>
 
+<!--<script>
+$('.btn-classic').on('click', 'a', function(){
 
+	/* vars */
+	var width = $(window).width();
+	var id = $(this).attr('href');
+	var h = parseFloat($(id).offset().top);
+/*	var card_item = $(id);
+	var menu_items = $('.top-menu li');
+	var menu_item = $(this).closest('li');
+	var d_lnk = $('.lnks .lnk.discover');
+
+	if((width >= 1024)) {
+		
+		/* if desktop *
+		if(!menu_item.hasClass('active') & (width > 1023) & $('.btn-classic').length) {
+
+			/* close card items *
+			menu_items.removeClass('active');
+			container.find(card_items).removeClass('animated '+animation_in);
+
+			if($(container).hasClass('opened')) {
+				container.find(card_items).addClass('animated '+animation_out);
+			}
+
+			/* open card item *
+			menu_item.addClass('active');
+			container.addClass('opened');
+			container.find(card_item).removeClass('animated '+animation_out);
+			container.find(card_item).addClass('animated '+animation_in);
+			
+			$(card_items).addClass('hidden');
+			
+			$(card_item).removeClass('hidden');
+			$(card_item).addClass('active');
+		}
+	}*/
+	/* if mobile */
+	if((width < 1024) & $('.btn-classic').length()) {
+
+		/* scroll to section */
+		$('body,html').animate({
+			scrollTop: h - 120
+		}, 500);
+	}
+	return true;
+});
+</script>-->
 <script>
 	function collab(){
 		alert("COMMING SOON... \n\n please press ok to continue!");
 	}
 	
+/*$(document).on("scroll",function(){
+    if($(document).scrollTop()>=300){
+        $("header").addClass("small");
+    } else{
 
+        $("header").removeClass("small");
+    } 
+});*/
 $(".btn-classic").on("click",function(){
         	$("header").addClass("small");
         	setTimeout(function(){$("header").removeClass("small");},1500)
 });
-
-
+$("#screen").hide();
+$(window).on("load",function(){
+	$(".container-preloader").fadeOut(400);
+	$(".spinner").addClass("done");
+	setTimeout(function(){
+		$("#screen").show();
+	},405)
+})
 </script>
 <script>
 function gooto(){
